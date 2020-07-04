@@ -1,0 +1,19 @@
+{% extends "HelloDjangoApp/layout.html" %}
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ title }}</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}" />
+</head>
+<body>
+  <div>
+    <a href="home">Home</a>
+    {% block content %}
+    {{ content }}
+    {% endblock %}
+  </div>
+</body>
+</html>
