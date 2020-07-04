@@ -43,3 +43,12 @@ def about(request):
             'year':datetime.now().year,
         }
     )
+
+def logout(request):
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/loggedoff.html',
+        {
+            'year' : datetime.now().year,    
+        })
